@@ -1,16 +1,16 @@
-package baekjun.step1;
+package baekjun.step3;
 
 import java.util.Scanner;
 
-public class Q2739 {
+public class Q2742 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();
 		
-		for(int i=1; i<10; i++) {
-			System.out.println(N + " * " + i + " = " + (N*i));
+		for(int i=N; i>0; i--) {
+			System.out.println(i);
 		}
 	}
 
