@@ -5,28 +5,18 @@ import java.util.Scanner;
 public class Q1712 {
 
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		int T = sc.nextInt();
-		
-		int[][] apt = new int[15][15];
-		
-		for(int i=0; i<15; i++) {
-			apt[i][1] = 1;
-			apt[0][i] = i;
-		}
-		
-		for(int i=1; i<15; i++) {
-			for(int j=2; j<15; j++) {
-				apt[i][j] = apt[i][j - 1] + apt[i - 1][j];
-			}
-		}
-		
-		for(int i=0; i<T; i++) {
-			int k = sc.nextInt();
-			int n = sc.nextInt();
-			System.out.println(apt[k][n]);
+		Scanner in = new Scanner(System.in);
+ 
+ 
+		int A = in.nextInt();	// 불변 비용
+		int B = in.nextInt();	// 가변 비용
+		int C = in.nextInt(); 	// 상품 가격
+        
+		if (C <= B) {
+			System.out.println("-1");
+		} 
+		else {
+			System.out.println((A/(C-B))+1);
 		}
 	}
 }
